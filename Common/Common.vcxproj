@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{04516afb-25a7-4fcc-9afa-4293002d3257}</ProjectGuid>
-    <RootNamespace>Infrastructure</RootNamespace>
+    <ProjectGuid>{83a881cd-0b95-4d4e-835b-755436935da3}</ProjectGuid>
+    <RootNamespace>Common</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>../Infrastructure/debug/x64/</OutDir>
-    <IntDir>../Infrastructure/debug/x64/</IntDir>
+    <OutDir>../bin/Common/debug/x64/</OutDir>
+    <IntDir>../bin/Common/debug/x64/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -124,6 +124,13 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>del  /Q "../include/Common"
+copy "./*.h" "../include/Common"
+copy "../bin/Common/debug/x64" "../lib/debug/x64"
+</Command>
+      <Message>해당 디렉토리 헤더 제거후, 헤더, lib 복사.</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -145,6 +152,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EngineStructure.h" />
+    <ClInclude Include="ErrorCode.h" />
+    <ClInclude Include="IEngine.h" />
+    <ClInclude Include="INetworkEngine.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

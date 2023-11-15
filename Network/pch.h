@@ -7,6 +7,10 @@
 #ifndef PCH_H
 #define PCH_H
 
+// Windows 헤더 파일
+#include <windows.h>
+
 // 여기에 미리 컴파일하려는 헤더 추가
+#pragma comment(lib, "Common.lib")
 
 #endif //PCH_H

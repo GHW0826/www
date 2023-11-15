@@ -2,8 +2,21 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Engine\WFEngine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Engine\WFEngine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ClientInterface">
+      <UniqueIdentifier>{5e751a16-5a14-4fca-b6ea-e53e3ed2f11d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{11c39ea8-4886-4b3f-8d05-420b4f9b71c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
