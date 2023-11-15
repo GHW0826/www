@@ -153,10 +153,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="System\Atomic.h" />
+    <ClInclude Include="System\CriticalSection.h" />
+    <ClInclude Include="System\Interlocked.h" />
+    <ClInclude Include="System\IThread.h" />
+    <ClInclude Include="System\RWCriticalSection.h" />
+    <ClInclude Include="System\ScopedLock.h" />
+    <ClInclude Include="System\ScopedRWLock.h" />
+    <ClInclude Include="System\SharedPtr.h" />
+    <ClInclude Include="System\Types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Base.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

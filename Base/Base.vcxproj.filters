@@ -2,9 +2,43 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="NonCopyable.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\IThread.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Types.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ScopedLock.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\CriticalSection.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Atomic.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Interlocked.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\RWCriticalSection.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SharedPtr.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ScopedRWLock.h">
+      <Filter>System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Base.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{d231aac3-e3d5-4354-977a-18c66ab67fe0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
